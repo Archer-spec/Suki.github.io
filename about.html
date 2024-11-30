@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            background-image: url('pink 1.jpg');
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #ff66b2;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background-color: #fff0f5;
+            border: 2px solid #ff99cc;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+        }
+        h1 {
+            color: #ff3399;
+            margin-top: 60px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .info {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .datetime {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: #ff66b2;
+            font-size: 16px;
+            background-color: #fff0f5;
+            border: 2px solid #ff99cc;
+            border-radius: 8px;
+            padding: 5px 10px;
+            box-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            color: #ff66b2;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 10px;
+        }
+        .audio-player {
+            margin-top: 20px;
+        }
+        .audio-player audio {
+            width: 100%;
+            border: 2px solid #ff99cc;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
+        }
+    </style>
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+            const datetime = now.toLocaleDateString('en-US', options);
+            document.getElementById('datetime').innerText = datetime;
+        }
+        setInterval(updateDateTime, 1000);
+    </script>
+</head>
+<body onload="updateDateTime()">
+    <div class="datetime" id="datetime"></div>
+    <h1>About Me</h1>
+    <div class="container">
+        <p>This biodata is about me and my family. I'm a sister and the first child. My zodiac is Taurus and my MBTI is ISTP.</p>
+        <div class="info">
+            <strong>Name:</strong> ZULAIHA BINTI ZULKHAIRE @ FUAD
+        </div>
+        <div class="info">
+            <strong>Age:</strong> 20 y/o
+        </div>
+        <div class="info">
+            <strong>Occupation:</strong> STUDENT
+        </div>
+        <div class="info">
+            <strong>Hobbies:</strong>
+            <ul type="square">
+                <li>Drawing</li>
+                <li>Sleeping</li>
+                <li>Eating</li>
+                <li>Playing games</li>
+                <li>Listening to music</li>
+                <li>Doing some sports</li>
+            </ul>
+        </div>
+        <div class="social-links">
+            <a href="https://www.instagram.com/zuly.shy" target="_blank"><b><i>✨Follow me on Instagram✨</i></b></a>
+        </div>
+        <div class="audio-player">
+		<p>🌦️<b><u>Favourite Song</b></u>🌦️</p>
+            <audio controls>
+                <source src="hari mendung.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+</body>
+</html>
